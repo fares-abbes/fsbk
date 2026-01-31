@@ -1,0 +1,183 @@
+<div class="page-container">
+  <h1 class="page-title">Matching &amp; Accounting</h1>
+
+  <div class="tabs">
+    <button
+      class="tab"
+      type="button"
+      [class.active]="activeTab === 'matching'"
+      (click)="setTab('matching')"
+    >
+      Matching
+    </button>
+    <button
+      class="tab"
+      type="button"
+      [class.active]="activeTab === 'accounting'"
+      (click)="setTab('accounting')"
+    >
+      Écriture Comptable
+    </button>
+    <button
+      class="tab"
+      type="button"
+      [class.active]="activeTab === 'deletion'"
+      (click)="setTab('deletion')"
+    >
+      Suppression
+    </button>
+  </div>
+
+  @if (activeTab === 'matching') {
+    <section class="rectangle">
+      <h2 class="rectangle-title">Matching</h2>
+
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Process</th>
+              <th>Status</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (row of matchingRows; track row.name) {
+              <tr>
+                <td>{{ row.name }}</td>
+                <td><app-status-badge [status]="row.status" /></td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.endDate }}</td>
+                <td>
+                  <button
+                    class="btn-primary btn-small"
+                    type="button"
+                    [disabled]="isMatchingDisabled(row)"
+                    (click)="onRunMatching(row)"
+                  >
+                    Match
+                  </button>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="rectangle">
+      <h2 class="rectangle-title">Batch Exchange Actions</h2>
+
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Action</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (row of fileExchangeRows; track row.name) {
+              <tr>
+                <td>{{ row.name }}</td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.endDate }}</td>
+                <td>
+                  <button class="btn-warning btn-small" type="button" (click)="onRunExchange(row)">
+                    {{ row.action }}
+                  </button>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+  }
+
+  @if (activeTab === 'accounting') {
+    <section class="rectangle">
+      <div class="rectangle-header">
+        <h2 class="rectangle-title">Day OP</h2>
+        <button class="btn-primary" type="button" (click)="onRunDayOp()">Run Day OP</button>
+      </div>
+
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Process</th>
+              <th>Status</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (row of dayOpRows; track row.name) {
+              <tr>
+                <td>{{ row.name }}</td>
+                <td><app-status-badge [status]="row.status" /></td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.endDate }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="rectangle">
+      <div class="rectangle-header">
+        <h2 class="rectangle-title">Mouvement &amp; Archivage</h2>
+        <button class="btn-primary" type="button" (click)="onRunMouvement()">Run Mouvement &amp; Archivage</button>
+      </div>
+
+      <div class="table-container">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Process</th>
+              <th>Status</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (row of mouvementRows; track row.name) {
+              <tr>
+                <td>{{ row.name }}</td>
+                <td><app-status-badge [status]="row.status" /></td>
+                <td>{{ row.startDate }}</td>
+                <td>{{ row.endDate }}</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </section>
+  }
+
+  @if (activeTab === 'deletion') {
+    <section class="rectangle">
+      <h2 class="rectangle-title">Suppression</h2>
+
+      <div class="info-box">
+        This section simulates a deletion workflow. Selecting a date triggers an action.
+      </div>
+
+      <div class="form-row">
+        <label class="form-label" for="clearDate">Select Date to Clear Data:</label>
+        <input
+          id="clearDate"
+          class="date-input"
+          type="date"
+          (change)="onClearDateChange(($any($event.target)).value)"
+        />
+      </div>
+    </section>
+  }
+</div>

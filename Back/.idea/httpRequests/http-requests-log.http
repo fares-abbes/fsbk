@@ -1,0 +1,80 @@
+POST http://localhost:5000/user/signin
+Authorization: Digest Admin A@a123123123
+Content-Length: 377
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+POST http://localhost:5000/BankSettlementController/generateBankSettCodeUAP070
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWlmZWRkaW5lLnNhbGFoQG1zc29sdXRpb25zLWdyb3VwLmNvbSIsImlhdCI6MTc1ODY0MTA4NSwiZXhwIjoxNzU4NzI3NDg1fQ.tI7Eb3eBK67IC95Rx0TWtkacw2jzDqIipr6w62qZWsoMj0c9aY2cZyMrAkzmbZIprTlBjVF-rKssT6CwbmJTLQ
+
+sens=OUT
+
+###
+
+POST http://localhost:5000/user/signin
+Authorization: Digest Admin A@a123123123
+Content-Length: 377
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+POST http://localhost:5000/BankSettlementController/generateBankSettCodeUAP070
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWlmZWRkaW5lLnNhbGFoQG1zc29sdXRpb25zLWdyb3VwLmNvbSIsImlhdCI6MTc1ODY0MTA4NSwiZXhwIjoxNzU4NzI3NDg1fQ.tI7Eb3eBK67IC95Rx0TWtkacw2jzDqIipr6w62qZWsoMj0c9aY2cZyMrAkzmbZIprTlBjVF-rKssT6CwbmJTLQ
+
+sens=OUT
+
+###
+
+POST http://localhost:5000/BankSettlementController/generateBankSettCodeUAP070
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWlmZWRkaW5lLnNhbGFoQG1zc29sdXRpb25zLWdyb3VwLmNvbSIsImlhdCI6MTc1ODY0MTA4NSwiZXhwIjoxNzU4NzI3NDg1fQ.tI7Eb3eBK67IC95Rx0TWtkacw2jzDqIipr6w62qZWsoMj0c9aY2cZyMrAkzmbZIprTlBjVF-rKssT6CwbmJTLQ
+Content-Length: 8
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+sens=OUT
+
+<> 2025-09-24T163542.403.json
+
+###
+
+POST http://localhost:5000/BankSettlementController/generateBankSettCodeUAP070
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 255
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+%7B%0AAuthorization%3A+Bearer+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWlmZWRkaW5lLnNhbGFoQG1zc29sdXRpb25zLWdyb3VwLmNvbSIsImlhdCI6MTc1ODY0MTA4NSwiZXhwIjoxNzU4NzI3NDg1fQ.tI7Eb3eBK67IC95Rx0TWtkacw2jzDqIipr6w62qZWsoMj0c9aY2cZyMrAkzmbZIprTlBjVF-rKssT6CwbmJTLQ%0A%7D=
+
+<> 2025-09-24T163402.403.json
+
+###
+
+POST http://localhost:5000/BankSettlementController/generateBankSettCodeUAP070
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 49
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+%7B%0A%22token%22%3A+%22my-secret-token%22%0A%7D=
+
+<> 2025-09-24T163332.403.json
+
+###
+
+POST http://localhost:5000/BankSettlementController/generateBankSettCodeUAP070
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2025-09-24T163052.403.json
+
+###
+

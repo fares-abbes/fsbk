@@ -1,0 +1,19 @@
+<div class="app-container">
+  <nav class="navbar">
+    <div class="navbar-content">
+      <div class="navbar-brand">Compensation Workflow</div>
+      <div class="navbar-links">
+        <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          TP Integration
+        </a>
+        <a class="nav-link" routerLink="/matching" routerLinkActive="active">
+          Matching &amp; Accounting
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <router-outlet />
+  </main>
+</div>

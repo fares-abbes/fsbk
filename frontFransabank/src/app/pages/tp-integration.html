@@ -1,0 +1,74 @@
+<div class="page-container">
+  <h1 class="page-title">TP Integration</h1>
+
+  <section class="rectangle">
+    <h2 class="rectangle-title">Integration Fichier National</h2>
+
+    <div class="table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Integration</th>
+            <th>Status</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of nationalIntegrations; track row.name) {
+            <tr>
+              <td>{{ row.name }}</td>
+              <td><app-status-badge [status]="row.status" /></td>
+              <td>{{ row.startDate }}</td>
+              <td>{{ row.endDate }}</td>
+              <td>
+                <div class="button-group">
+                  <button class="btn-primary btn-small" type="button" (click)="onStart(row)">Start</button>
+                  @if (row.status === 'Error') {
+                    <button class="btn-danger btn-small" type="button" (click)="onBypass(row)">Bypass</button>
+                  }
+                  <button class="btn-secondary btn-small" type="button" (click)="onView(row)">View</button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="rectangle">
+    <h2 class="rectangle-title">Integration Fichier International</h2>
+
+    <div class="table-container">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Integration</th>
+            <th>Status</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of internationalIntegrations; track row.name) {
+            <tr>
+              <td>{{ row.name }}</td>
+              <td><app-status-badge [status]="row.status" /></td>
+              <td>{{ row.startDate }}</td>
+              <td>{{ row.endDate }}</td>
+              <td>
+                <div class="button-group">
+                  <button class="btn-primary btn-small" type="button" (click)="onStart(row)">Start</button>
+                  <button class="btn-secondary btn-small" type="button" (click)="onView(row)">View</button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,143 @@
+spring.main.allow-bean-definition-overriding=true
+spring.servlet.multipart.max-file-size=10485760
+
+
+
+
+# Data source
+spring.datasource.driverClassName=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.database-platform=org.hibernate.dialect.SQLServer2012Dialect
+
+
+## ****************PreProd*************
+#spring.datasource.url=jdbc:sqlserver://192.168.70.101:1433;databaseName=SPARK
+#spring.datasource.username=SPARK_ADM
+#spring.datasource.password=Spark123
+## *****************************
+
+
+
+# ****************Prod*************
+#spring.datasource.url=jdbc:sqlserver://10.141.11.3:1433;databaseName=SPARK
+#spring.datasource.password=Spark2023
+# *****************************
+
+
+
+
+
+# ****************dev*************
+#spring.datasource.url=jdbc:sqlserver://192.168.1.9:1433;databaseName=SPARK
+spring.datasource.url=jdbc:sqlserver://172.16.100.120:1433;databaseName=SPARK
+spring.datasource.username=MssUsr
+spring.datasource.password=abc.123
+
+
+
+#spring.jpa.properties.hibernate.use-new-id-generator-mappings: false
+
+
+spring.data.jpa.repositories.bootstrap_mode=default
+
+
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.show_sql=false
+spring.jpa.properties.hibernate.use_sql_comments=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.h2.console.enabled=false
+#logging.level.org.hibernate=DEBUG
+timeout=10000
+
+#dev
+#filePath=C:/Users/Lenovo IdeaPad L3/Downloads/porteur.txt
+
+
+#preprod
+filePath=/home/fsbkatm/Documents/porteur.txt
+fileBePath=/home/fsbkatm/Documents/be.txt
+fileJsonPath=/home/fsbkatm/Documents/jsonfiles
+posFilesPath=/home/fsbkatm/Documents/
+compensationfilePathCRA=C:/local/FSBKFiles/CRA
+compensationfilePathLOT=C:/local/FSBKFiles
+compensationfilePath=C:/local/FSBKFiles/CRA_ARCHIVE
+compensationfilePathCro=C:/local/FSBKFiles/CRO_ARCHIVE
+soldeFilePath=/home/fsbkatm/Documents/SOLDE
+soldeArchiveFilePath=/home/fsbkatm/Documents/SOLDE/ARCHIVE
+soldeFileName=AMP_SOLDE
+#posFilesPath=src/main/resources/
+
+fileJsonPathLog=/home/fsbkatm/Documents/atmlogs/outputLogstash
+fileRef=/home/fsbkatm/Documents/atmlogs/TrRefLogs
+fileAuth=/home/fsbkatm/Documents/atmlogs/TrAuthLogs
+fileSolde=/home/fsbkatm/Documents/atmlogs/TrSoldeLogs
+
+#bkmUAPath
+newFile=C:/local/FSBKFiles/
+oldFile=C:/local/FSBKFiles/old/
+
+fileJsonPathLog=/home/fsbkatm/Documents/atmlogs/outputLogstash
+fileRef=/home/fsbkatm/Documents/atmlogs/TrRefLogs
+fileAuth=/home/fsbkatm/Documents/atmlogs/TrAuthLogs
+fileSolde=/home/fsbkatm/Documents/atmlogs/TrSoldeLogs
+
+#server.port=5002
+server.port=5000
+spring.jpa.properties.hibernate.jdbc.batch_size=1000
+spring.jpa.properties.hibernate.order_inserts=true
+# swagger
+swagger.host_url=localhost:5000
+
+#swagger.host_url=172.18.12.241:5000
+
+swagger.contextPath=/
+swagger.swaggerPath=/
+server.servlet.context-path=/
+server.error.whitelabel.enabled=false 
+server.compression.mime-types=*/*
+server.compression.enabled=true
+server.compression.min-response-size=1000
+
+#JWT configuration
+app.jwtSecret= JWTSuperSecretKey
+app.jwtExpirationInMs =86400000
+app.jwtRefreshExpirationInMs=432000000
+jwt.route.authentication.refresh=/refresh
+jwt.header=Authorization
+
+#Mail
+#spring.mail.host=mail.fransabank.dz
+
+spring.mail.host=192.168.70.47
+spring.mail.port=25
+spring.mail.username=MSPARK.MON@fransabank.dz
+spring.mail.password=5cWcp4KL3xZ4
+spring.mail.properties.mail.smtp.auth= false
+spring.mail.properties.mail.smtp.starttls.enable=false
+
+
+
+#spring.mail.host=smtp.office365.com
+#spring.mail.properties.mail.store.protocol=pop3
+#spring.mail.port=587
+#spring.mail.username=mailing@mssolutions-group.com
+#spring.mail.password=Sof20693
+#spring.mail.properties.mail.smtp.auth= true
+#spring.mail.properties.mail.smtp.starttls.enable=true
+
+spring.transaction.rollback-on-commit-failure=true
+# The format used for the keystore. It could be set to JKS in case it is a JKS file
+#server.ssl.key-store-type=PKCS12
+# The path to the keystore containing the certificate
+server.ssl.key-store=Fransabank2023.p12
+# The password used to generate the certificate
+server.ssl.key-store-password=Fsbk1234
+# The alias mapped to the certificate
+#server.ssl.key-alias=mssmon
+server.ssl.enabled=false
+
+
+spring.task.execution.pool.core-size=20
+spring.task.execution.pool.max-size=50
+
+

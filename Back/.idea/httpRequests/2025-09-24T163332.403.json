@@ -1,0 +1,7 @@
+{
+  "timestamp": "2025-09-24T15:33:32.226+0000",
+  "status": 403,
+  "error": "Forbidden",
+  "message": "Access Denied",
+  "path": "/BankSettlementController/generateBankSettCodeUAP070"
+}
