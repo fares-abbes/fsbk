@@ -3,15 +3,12 @@ import {
 } from "./chunk-IG5Y2RHW.js";
 import {
   ConnectedOverlayScrollHandler
-} from "./chunk-UDAIENM5.js";
+} from "./chunk-IKD63X4V.js";
 import {
   BaseComponent,
   BaseStyle,
   PARENT_INSTANCE
-} from "./chunk-EKB7OS2L.js";
-import {
-  isPlatformBrowser
-} from "./chunk-PDA2V3S2.js";
+} from "./chunk-YFIPNPUM.js";
 import {
   BindModule
 } from "./chunk-H7ATFKEE.js";
@@ -29,6 +26,9 @@ import {
   v,
   z
 } from "./chunk-DBGGI7FW.js";
+import {
+  isPlatformBrowser
+} from "./chunk-PDA2V3S2.js";
 import {
   Directive,
   Injectable,
@@ -1049,4 +1049,4 @@ export {
   Tooltip,
   TooltipModule
 };
-//# sourceMappingURL=chunk-L3BBRHVA.js.map
+//# sourceMappingURL=chunk-7BZFY6QT.js.map

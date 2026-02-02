@@ -2,21 +2,21 @@ import {
   BaseComponent,
   BaseStyle,
   PARENT_INSTANCE
-} from "./chunk-EKB7OS2L.js";
+} from "./chunk-YFIPNPUM.js";
+import {
+  Bind
+} from "./chunk-H7ATFKEE.js";
 import {
   PrimeTemplate,
   SharedModule
-} from "./chunk-ZHTP4ZC3.js";
+} from "./chunk-5P6BGDVS.js";
+import "./chunk-DBGGI7FW.js";
 import {
   CommonModule,
   NgClass,
   NgIf,
   NgTemplateOutlet
 } from "./chunk-PDA2V3S2.js";
-import {
-  Bind
-} from "./chunk-H7ATFKEE.js";
-import "./chunk-DBGGI7FW.js";
 import {
   ChangeDetectionStrategy,
   Component,

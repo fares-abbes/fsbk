@@ -1,29 +1,24 @@
 import {
   Ripple,
   RippleModule
-} from "./chunk-AOHWGIT2.js";
+} from "./chunk-DRGOZPBY.js";
 import {
   ChevronLeftIcon,
   ChevronRightIcon
-} from "./chunk-LK7BBJWW.js";
+} from "./chunk-YIZ52F62.js";
 import {
   BaseComponent,
   BaseStyle,
   PARENT_INSTANCE
-} from "./chunk-EKB7OS2L.js";
-import {
-  PrimeTemplate,
-  SharedModule
-} from "./chunk-ZHTP4ZC3.js";
-import {
-  CommonModule,
-  NgTemplateOutlet,
-  isPlatformBrowser
-} from "./chunk-PDA2V3S2.js";
+} from "./chunk-YFIPNPUM.js";
 import {
   Bind,
   BindModule
 } from "./chunk-H7ATFKEE.js";
+import {
+  PrimeTemplate,
+  SharedModule
+} from "./chunk-5P6BGDVS.js";
 import {
   K,
   Q,
@@ -35,6 +30,11 @@ import {
   v,
   z
 } from "./chunk-DBGGI7FW.js";
+import {
+  CommonModule,
+  NgTemplateOutlet,
+  isPlatformBrowser
+} from "./chunk-PDA2V3S2.js";
 import {
   ChangeDetectionStrategy,
   Component,
